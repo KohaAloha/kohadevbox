@@ -1,0 +1,29 @@
+language: ruby
+#  - "5.8"
+#  - "5.10"
+#  - "5.12"
+#  - "5.14"
+#  - "5.16"
+#  - "5.18"
+
+before_install:
+  - cp config.cfg-sample config.cfg
+  - cp koha-sites.cfg-sample koha-sites.cfg
+  - cp koha.psgi-sample koha.psgi
+  - sudo apt-get install vagrant
+  - vagrant plugin install vagrant-cachier
+  - vagrant plugin install vagrant-vbguest
+# success!!
+
+# install SDL_Perl
+install:
+  - vagrant up jessie
+
+#script: prove -v
+
+#notifications:
+#  irc:
+#    channels:
+#      - "irc.perl.org#sdl"
+#    on_success: change
+#    on_failure: always
