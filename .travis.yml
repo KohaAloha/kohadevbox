@@ -7,10 +7,13 @@ language: ruby
 #  - "5.18"
 
 before_install:
+  - pwd
+  - lsb_release -a
   - cp config.cfg-sample config.cfg
   - cp koha-sites.cfg-sample koha-sites.cfg
   - cp koha.psgi-sample koha.psgi
   - sudo apt-get install vagrant
+  - vagrant -v
   - vagrant plugin install vagrant-cachier
   - vagrant plugin install vagrant-vbguest
 
