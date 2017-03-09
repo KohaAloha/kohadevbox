@@ -13,9 +13,8 @@ before_install:
   - sudo apt-get install vagrant
   - vagrant plugin install vagrant-cachier
   - vagrant plugin install vagrant-vbguest
-# success!!
 
-# install SDL_Perl
+# install..
 install:
   - vagrant up jessie
 
@@ -24,6 +23,6 @@ script: prove -v
 #notifications:
 #  irc:
 #    channels:
-#      - "irc.perl.org#sdl"
+#      - "irc.perl.org#doof"
 #    on_success: change
 #    on_failure: always
