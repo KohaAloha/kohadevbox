@@ -19,7 +19,7 @@ before_install:
 install:
   - vagrant up jessie
 
-#script: prove -v
+script: prove -v
 
 #notifications:
 #  irc:
